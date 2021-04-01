@@ -120,7 +120,7 @@ def get_top_100_by_genre(genre):
         movies_by_genre = create_movies_by_genre()
         print("Done.")
 
-    genre_top_100 = {key: movies_by_genre[genre][key] for key in list(movies_by_genre[genre].keys())[:100]}
+    genre_top_100 = {key: movies_by_genre[genre][key] for key in list(movies_by_genre[genre].keys())[:1]}
 
     return genre_top_100
 
@@ -186,47 +186,47 @@ def get_data(instance, lead_actor_1, lead_actor_2, director, producer, top_genre
     averages = {'lead_actor_1': {}, 'lead_actor_2': {}, 'director': {}, 'producer': {}, 'top_genre': {},
                   'secondary_genre': {}}
 
-    print('Getting data for LEAD ACTOR 1...')
-    print('---opening weekend revenues ...')
-    averages['lead_actor_1']['opening_weekend_revenues'], categorized_ratios['lead_actor_1'], movie_data['lead_actor_1']['opening_weekend_revenues'] = get_10_prev_revenues_for(lead_actor_1, instance, True)
-    print('---worldwide revenues ...')
-    averages['lead_actor_1']['worldwide_revenues'], movie_data['lead_actor_1']['worldwide_revenues'] = get_10_prev_revenues_for(lead_actor_1, instance, False)
-    print('Done.\n')
-
-    print('Getting data for LEAD ACTOR 2...')
-    print('---opening weekend revenues ...')
-    averages['lead_actor_2']['opening_weekend_revenues'], categorized_ratios['lead_actor_2'], movie_data['lead_actor_2']['opening_weekend_revenues'] = get_10_prev_revenues_for(lead_actor_2, instance, True)
-    print('---worldwide revenues ...')
-    averages['lead_actor_2']['worldwide_revenues'], movie_data['lead_actor_2']['worldwide_revenues'] = get_10_prev_revenues_for(lead_actor_2, instance, False)
-    print('Done.\n')
-
-    print('Getting data for DIRECTOR...')
-    print('---opening weekend revenues ...')
-    averages['director']['opening_weekend_revenues'], categorized_ratios['director'], movie_data['director']['opening_weekend_revenues'] = get_10_prev_revenues_for(director, instance, True)
-    print('---worldwide revenues ...')
-    averages['director']['worldwide_revenues'], movie_data['director']['worldwide_revenues'] = get_10_prev_revenues_for(director, instance, False)
-    print('Done.\n')
-
-    print('Getting data for PRODUCER...')
-    print('---opening weekend revenues ...')
-    averages['producer']['opening_weekend_revenues'], categorized_ratios['producer'], movie_data['producer']['opening_weekend_revenues'] = get_10_prev_revenues_for(producer, instance, True)
-    print('---worldwide revenues ...')
-    averages['producer']['worldwide_revenues'], movie_data['producer']['worldwide_revenues'] = get_10_prev_revenues_for(producer, instance, False)
-    print('Done.\n')
-
-    print('Getting data for TOP GENRE...')
-    print('---opening weekend revenues ...')
-    averages['top_genre']['opening_weekend_revenues'], categorized_ratios['top_genre'], movie_data['top_genre']['opening_weekend_revenues'] = get_top_100_revenues_for(top_genre, instance, True)
-    print('---worldwide revenues ...')
-    averages['top_genre']['worldwide_revenues'], movie_data['top_genre']['worldwide_revenues'] = get_top_100_revenues_for(top_genre, instance, False)
-    print('Done.\n')
-
-    print('Getting data for SECONDARY GENRE...')
-    print('---opening weekend revenues ...')
-    averages['secondary_genre']['opening_weekend_revenues'], categorized_ratios['secondary_genre'], movie_data['secondary_genre']['opening_weekend_revenues'] = get_top_100_revenues_for(secondary_genre, instance, True)
-    print('---worldwide revenues ...')
-    averages['secondary_genre']['worldwide_revenues'], movie_data['secondary_genre']['worldwide_revenues'] = get_top_100_revenues_for(secondary_genre, instance, False)
-    print('Done.\n')
+    # print('Getting data for LEAD ACTOR 1...')
+    # print('---opening weekend revenues ...')
+    # averages['lead_actor_1']['opening_weekend_revenues'], categorized_ratios['lead_actor_1'], movie_data['lead_actor_1']['opening_weekend_revenues'] = get_10_prev_revenues_for(lead_actor_1, instance, True)
+    # print('---worldwide revenues ...')
+    # averages['lead_actor_1']['worldwide_revenues'], movie_data['lead_actor_1']['worldwide_revenues'] = get_10_prev_revenues_for(lead_actor_1, instance, False)
+    # print('Done.\n')
+    #
+    # print('Getting data for LEAD ACTOR 2...')
+    # print('---opening weekend revenues ...')
+    # averages['lead_actor_2']['opening_weekend_revenues'], categorized_ratios['lead_actor_2'], movie_data['lead_actor_2']['opening_weekend_revenues'] = get_10_prev_revenues_for(lead_actor_2, instance, True)
+    # print('---worldwide revenues ...')
+    # averages['lead_actor_2']['worldwide_revenues'], movie_data['lead_actor_2']['worldwide_revenues'] = get_10_prev_revenues_for(lead_actor_2, instance, False)
+    # print('Done.\n')
+    #
+    # print('Getting data for DIRECTOR...')
+    # print('---opening weekend revenues ...')
+    # averages['director']['opening_weekend_revenues'], categorized_ratios['director'], movie_data['director']['opening_weekend_revenues'] = get_10_prev_revenues_for(director, instance, True)
+    # print('---worldwide revenues ...')
+    # averages['director']['worldwide_revenues'], movie_data['director']['worldwide_revenues'] = get_10_prev_revenues_for(director, instance, False)
+    # print('Done.\n')
+    #
+    # print('Getting data for PRODUCER...')
+    # print('---opening weekend revenues ...')
+    # averages['producer']['opening_weekend_revenues'], categorized_ratios['producer'], movie_data['producer']['opening_weekend_revenues'] = get_10_prev_revenues_for(producer, instance, True)
+    # print('---worldwide revenues ...')
+    # averages['producer']['worldwide_revenues'], movie_data['producer']['worldwide_revenues'] = get_10_prev_revenues_for(producer, instance, False)
+    # print('Done.\n')
+    #
+    # print('Getting data for TOP GENRE...')
+    # print('---opening weekend revenues ...')
+    # averages['top_genre']['opening_weekend_revenues'], categorized_ratios['top_genre'], movie_data['top_genre']['opening_weekend_revenues'] = get_top_100_revenues_for(top_genre, instance, True)
+    # print('---worldwide revenues ...')
+    # averages['top_genre']['worldwide_revenues'], movie_data['top_genre']['worldwide_revenues'] = get_top_100_revenues_for(top_genre, instance, False)
+    # print('Done.\n')
+    #
+    # print('Getting data for SECONDARY GENRE...')
+    # print('---opening weekend revenues ...')
+    # averages['secondary_genre']['opening_weekend_revenues'], categorized_ratios['secondary_genre'], movie_data['secondary_genre']['opening_weekend_revenues'] = get_top_100_revenues_for(secondary_genre, instance, True)
+    # print('---worldwide revenues ...')
+    # averages['secondary_genre']['worldwide_revenues'], movie_data['secondary_genre']['worldwide_revenues'] = get_top_100_revenues_for(secondary_genre, instance, False)
+    # print('Done.\n')
 
     return averages, categorized_ratios, movie_data
 
@@ -285,18 +285,18 @@ def get_movie_info(id):
     date = datetime.datetime.now().date()
     filename = str(id) + "_" + str(date)
 
+    try:
+        os.makedirs('output_data')
+    except:
+        # it already exists
+        pass
+
     print("Writing the data in JSON format...")
     with open('output_data/' + filename + '.json', 'w') as f:
         json.dump(movie_data, f)
 
     print("Creating CSVs...")
     weekend_csv, worldwide_csv = create_CSVs(movie_data)
-
-    try:
-        os.makedirs('output_data')
-    except:
-        # it already exists
-        pass
 
     print("Writing the data to 2 .CSV files...")
     with open('output_data/' + filename + '_weekend.csv', 'w', newline='\n') as f:
